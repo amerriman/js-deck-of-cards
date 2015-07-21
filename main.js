@@ -15,6 +15,10 @@ showCards.onclick = function(){
   var cardContainer = document.getElementById('container');
   //sets cardContainer insides to an empty string
   cardContainer.innerHTML = "";
+  //shows the reset button
+  var showButton = document.getElementById('reset');
+    showButton.style.visibility="visible";
+
 
   //calls the dC function
   displayCards();
@@ -39,10 +43,15 @@ function displayCards(){
 
   }
 }
+//hides the cards when you click the reset button
 var hideCards = document.getElementById("reset");
   hideCards.onclick = function() {
   var resetContainer = document.getElementById('container');
     resetContainer.innerHTML = "";
+  //hides the reset button
+  var hideButton = document.getElementById("reset");
+      hideButton.style.visibility="hidden";
+
   };
 
 // Creates a deck of 52 cards
