@@ -1,11 +1,3 @@
-// if this goes up here, it won't work - it has to go below the "deal" part
-//var hideCards = document.getElementById("reset");
-//   hideCards.onclick = function() {
-//   var resetContainer = document.getElementById('container');
-//     resetContainer.innerHTML = "";
-//     hideCards();
-//   };
-
 //this is for interacting with the DOM
 var showCards = document.getElementById("cards");
 
@@ -15,9 +7,23 @@ showCards.onclick = function(){
   var cardContainer = document.getElementById('container');
   //sets cardContainer insides to an empty string
   cardContainer.innerHTML = "";
+
   //shows the reset button
-  var showButton = document.getElementById('reset');
-    showButton.style.visibility="visible";
+  var showReset = document.getElementById('reset');
+    showReset.style.visibility="visible";
+
+    document.getElementById("cards").innerHTML="Re-Deal";
+
+
+  //make the re-deal button and have it come up when the reset button is pressed
+  // var reDeal = document.createElement("button");
+  //   var reDealText = document.createTextNode("Re-Deal!");
+  //     reDeal.appendChild(reDealText);
+  //     document.body.appendChild(reDeal);
+      //These make the deal button break...?
+      // reDeal.setAttribute("id", "reDealB");
+      // reDealText.setAttribute("id", "reDealT");
+
 
 
   //calls the dC function
@@ -49,10 +55,16 @@ var hideCards = document.getElementById("reset");
   var resetContainer = document.getElementById('container');
     resetContainer.innerHTML = "";
   //hides the reset button
-  var hideButton = document.getElementById("reset");
-      hideButton.style.visibility="hidden";
+
+  var hideReset = document.getElementById("reset");
+      hideReset.style.visibility="hidden";
+
+document.getElementById("cards").innerHTML="Deal";
 
   };
+
+
+
 
 // Creates a deck of 52 cards
 function newDeck(){
